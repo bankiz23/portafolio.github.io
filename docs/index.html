@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo - Portafolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            padding: 2em;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        
+        h1 {
+            color: #00ffcc;
+            animation: fadeIn 2s;
+        }
+        
+        h2 {
+            color: #0099ff;
+            animation: fadeIn 2s;
+        }
+        
+        .section-title {
+            color: #00ffcc;
+            margin-bottom: 1em;
+            animation: fadeInUp 2s;
+        }
+        
+        .section-content {
+            background-color: #1a1a1a;
+            padding: 1em;
+            border-radius: 10px;
+            animation: fadeInUp 2s;
+        }
+        
+        a {
+            color: #00ccff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .loading-spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0d0d0d;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading-spinner" id="loading">
+        <div class="spinner-border text-info" role="status">
+            <span class="visually-hidden">Cargando...</span>
+        </div>
+    </div>
+    <div class="container" id="content">
+        <h1 class="text-center">Ejemplo</h1>
+        <h2 class="text-center">Portafolio Personal</h2>
+
+        <div class="section">
+            <div class="section-title">Biografía</div>
+            <div class="section-content">
+                <p>Hola, soy Ejemplo. Soy un apasionado de la tecnología y el diseño futurista. Me especializo en el desarrollo web y siempre busco nuevas maneras de innovar y mejorar la experiencia del usuario.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Proyectos</div>
+            <div class="section-content">
+                <p>Proyecto 1: <a href="#">Descripción y enlace al proyecto</a></p>
+                <p>Proyecto 2: <a href="#">Descripción y enlace al proyecto</a></p>
+                <p>Proyecto 3: <a href="#">Descripción y enlace al proyecto</a></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Habilidades</div>
+            <div class="section-content">
+                <p>HTML, CSS, JavaScript, React, Node.js, Python</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Educación</div>
+            <div class="section-content">
+                <p>Licenciatura en Ciencias de la Computación, Universidad Ejemplo</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Experiencia Laboral</div>
+            <div class="section-content">
+                <p>Desarrollador Web en Empresa Ejemplo (2020 - Presente)</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Testimonios</div>
+            <div class="section-content">
+                <p>"Ejemplo es un profesional increíble con un talento excepcional para el desarrollo web." - Cliente Satisfecho</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Contacto</div>
+            <div class="section-content">
+                <p>Email: <a href="mailto:ejemplo@correo.com">ejemplo@correo.com</a></p>
+                <p>LinkedIn: <a href="#">linkedin.com/in/ejemplo</a></p>
+                <p>GitHub: <a href="#">github.com/ejemplo</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loading = document.getElementById('loading');
+            const content = document.getElementById('content');
+
+            // Simulating loading time
+            setTimeout(() => {
+                loading.style.display = 'none';
+                content.style.opacity = 1;
+            }, 10000); // 2 seconds loading time
+        });
+    </script>
+</body>
+
+</html>
